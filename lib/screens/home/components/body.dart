@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
@@ -28,8 +27,7 @@ List<Opportunities> opporValues = [
   ),
   Opportunities(
     name: "Women Techmakers",
-    url:
-        "https://www.womentechmakers.com/",
+    url: "https://www.womentechmakers.com/",
     deadline: "14 Feb",
     eligibility:
         "A woman pursuing BTech in CS or related fields and in the batch of 2023 or 2024",
@@ -79,8 +77,14 @@ class Body extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: FloatingActionButton(
                 backgroundColor: kPrimaryColor,
-                onPressed: () =>
-                    Navigator.pushNamed(context, AddOpportunity.routeName),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new AddOpportunity(),
+                    ),
+                  );
+                },
                 child: Icon(Icons.add),
               ),
             ),

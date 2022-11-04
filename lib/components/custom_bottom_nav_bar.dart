@@ -1,3 +1,5 @@
+import 'package:empower_her/resources/add_resource.dart';
+import 'package:empower_her/screens/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../enums.dart';
@@ -39,50 +41,63 @@ class CustomBottomNavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
+                  icon: SvgPicture.asset(
+                    "assets/icons/home.svg",
+                    color: MenuState.home == selectedMenu
+                        ? Colors.white
+                        : Colors.black,
+                    height: 22,
+                    width: 22,
+                  ),
+                  onPressed: () {
+                    {
+                      Navigator.push(
+                        context,
+                        new MaterialPageRoute(
+                          builder: (context) => new AddResource(),
+                        ),
+                      );
+                    }
+                  }
+                  //Navigator.pushNamed(context, HomeScreen.routeName),
+                  ),
+              IconButton(
                 icon: SvgPicture.asset(
-                  "assets/icons/home.svg",
-                  color: MenuState.home == selectedMenu
+                  "assets/icons/book.svg",
+                  color: MenuState.resources == selectedMenu
                       ? Colors.white
                       : Colors.black,
-                  height: 22,
-                  width: 22,
+                  height: 24,
+                  width: 24,
                 ),
-                onPressed: () {}
-                    //Navigator.pushNamed(context, HomeScreen.routeName),
-              ),
-              IconButton(
-                icon: SvgPicture.asset("assets/icons/book.svg",
-                    color: MenuState.resources == selectedMenu
-                        ? Colors.white
-                        : Colors.black,height: 24,width: 24,),
-
-                onPressed: () =>
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ResourcesScreen()),
-                    ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ResourcesScreen()),
+                ),
               ),
               IconButton(
                 icon: SvgPicture.asset("assets/icons/Question mark.svg",
                     color: MenuState.mentor == selectedMenu
                         ? Colors.white
                         : Colors.black),
-                onPressed: () =>
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MentorScreen()),
-                    ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MentorScreen()),
+                ),
               ),
               IconButton(
-                icon: SvgPicture.asset("assets/icons/feather.svg",
-                    color: MenuState.story == selectedMenu
-                        ? Colors.white
-                        : Colors.black,height: 25,width: 25,),
-                onPressed: () =>
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => StoryScreen()),
-                    ),
+                icon: SvgPicture.asset(
+                  "assets/icons/feather.svg",
+                  color: MenuState.story == selectedMenu
+                      ? Colors.white
+                      : Colors.black,
+                  height: 25,
+                  width: 25,
+                ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StoryScreen()),
+                ),
               ),
               IconButton(
                 icon: SvgPicture.asset(
@@ -91,11 +106,10 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? Colors.white
                       : Colors.black,
                 ),
-                onPressed: () =>
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ProfileScreen()),
-                    ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileScreen()),
+                ),
               ),
             ],
           )),

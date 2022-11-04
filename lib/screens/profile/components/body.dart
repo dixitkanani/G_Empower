@@ -1,5 +1,5 @@
+import 'package:empower_her/screens/Login/Login.dart';
 import 'package:flutter/material.dart';
-
 
 import '../../splash/splash_screen.dart';
 import 'profile_menu.dart';
@@ -35,10 +35,16 @@ class Body extends StatelessWidget {
             press: () {},
           ),
           ProfileMenu(
-            text: "Log Out",
-            icon: "assets/icons/Log out.svg",
-           // press: () => Navigator.pushNamed(context, ),
-          ),
+              text: "Log Out",
+              icon: "assets/icons/Log out.svg",
+              press: () {
+                Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                    builder: (context) => new LoginScreen(),
+                  ),
+                );
+              }),
         ],
       ),
     );

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "219266233584",
-    "project_id": "women-empowerment-f9107",
-    "storage_bucket": "women-empowerment-f9107.appspot.com"
+    "project_number": "701379086115",
+    "project_id": "empowerher-b0b15",
+    "storage_bucket": "empowerher-b0b15.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:219266233584:android:5c7862aa82ce0f0d247e35",
+        "mobilesdk_app_id": "1:701379086115:android:6c01b75830d49cdd8e6e96",
         "android_client_info": {
           "package_name": "com.suryabhai.empower_her"
         }
       },
       "oauth_client": [
         {
-          "client_id": "219266233584-u9hg4ptskpl22dgv1tmrd22bgg2m0mo2.apps.googleusercontent.com",
+          "client_id": "701379086115-mkujshq7ck2nphra8ru1u3u11tbp7dj3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAucoMlw_Jr1s3ETFHqKOfz7QDJNUTmwlA"
+          "current_key": "AIzaSyCHwRXjbprcTUH95jP79BbdF2DdBhMeOTU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "219266233584-u9hg4ptskpl22dgv1tmrd22bgg2m0mo2.apps.googleusercontent.com",
+              "client_id": "701379086115-mkujshq7ck2nphra8ru1u3u11tbp7dj3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
